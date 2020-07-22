@@ -1,13 +1,17 @@
 <template>
-    <el-menu
-            default-active="2"
-            class="el-menu-vertical-demo"
-            @open="handleOpen"
-            @close="handleClose"
-            background-color="#004771"
-            text-color="#fff"
-            active-text-color="#ffd04b"
-            router={true}>
+    <el-menu :default-openeds="['1','3']"
+             default-active="2"
+             class="el-menu-vertical-demo"
+             @open="handleOpen"
+             @close="handleClose"
+             background-color="#004771"
+             text-color="#fff"
+             active-text-color="#ffd04b"
+             router>
+        <el-menu-item index="/login">
+            <i class="el-icon-user"></i>
+            <span>用户登录</span>
+        </el-menu-item>
         <el-submenu index="/">
             <template slot="title">
                 <i class="el-icon-location"></i>
@@ -36,11 +40,12 @@
 </script>
 
 <style scoped>
-    .el-menu{
+    .el-menu {
         width: 200px;
         box-sizing: border-box;
     }
-    .el-submenu{
+
+    .el-submenu {
         width: 200px;
         box-sizing: border-box;
     }
