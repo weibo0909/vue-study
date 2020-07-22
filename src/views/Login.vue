@@ -37,7 +37,7 @@
                         account: this.ruleForm.userName,
                         password: this.ruleForm.password
                     });
-                    this.$router.push('/');
+                    this.$router.push('/home');
                 }, 500);
             },
             errorhandle() {

@@ -1,14 +1,17 @@
 <template>
     <el-menu class="el-menu-vertical"
-             @open="handleOpen"
-             @close="handleClose"
+             :default-active="$router.path"
              background-color="#004771"
              text-color="#fff"
              active-text-color="#ffd04b"
              router>
-        <el-submenu index="/">
+        <el-menu-item index="/home">
+            <i class="el-icon-s-home"></i>
+            <span>首页</span>
+        </el-menu-item>
+        <el-submenu index="2">
             <template slot="title">
-                <i class="el-icon-s-home"></i>
+                <i class="el-icon-s-custom"></i>
                 <span>学习一</span>
             </template>
             <el-menu-item-group>
@@ -23,25 +26,16 @@
     export default {
         name: 'Menu',
         methods: {
-            handleOpen(key, keyPath) {
-                console.log(key, keyPath);
-            },
-            handleClose(key, keyPath) {
-                console.log(key, keyPath);
-            }
+
         }
     };
 </script>
 
 <style scoped>
-    .el-menu {
+    .el-menu, .el-submenu, .el-menu-item {
         width: 200px;
         box-sizing: border-box;
         text-align: left;
     }
 
-    .el-submenu {
-        width: 200px;
-        box-sizing: border-box;
-    }
 </style>
