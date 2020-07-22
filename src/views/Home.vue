@@ -30,14 +30,14 @@
 
 <style>
     .el-header {
-        background-color: #06789d;
-        color: #333;
+        background-color: #0080ff;
+        color: #fff;
         text-align: center;
         line-height: 60px;
     }
 
     .el-aside {
-        background-color: #004771;
+        background-color: #0f52ba;
         color: #333;
         text-align: center;
         line-height: 260px;
