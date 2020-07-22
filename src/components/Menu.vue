@@ -1,20 +1,14 @@
 <template>
-    <el-menu :default-openeds="['1','3']"
-             default-active="2"
-             class="el-menu-vertical-demo"
+    <el-menu class="el-menu-vertical"
              @open="handleOpen"
              @close="handleClose"
              background-color="#004771"
              text-color="#fff"
              active-text-color="#ffd04b"
              router>
-        <el-menu-item index="/login">
-            <i class="el-icon-user"></i>
-            <span>用户登录</span>
-        </el-menu-item>
         <el-submenu index="/">
             <template slot="title">
-                <i class="el-icon-location"></i>
+                <i class="el-icon-s-home"></i>
                 <span>学习一</span>
             </template>
             <el-menu-item-group>
@@ -43,6 +37,7 @@
     .el-menu {
         width: 200px;
         box-sizing: border-box;
+        text-align: left;
     }
 
     .el-submenu {

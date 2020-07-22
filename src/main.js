@@ -8,6 +8,15 @@ import './globalCompontents';
 
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
+Vue.prototype.$store = store;
+
+router.beforeEach((to, form, next) => {
+    if (store.state?.userInfo || to.path === '/login') {
+        next();
+    } else {
+        next({path: '/login'});
+    }
+});
 
 new Vue({
     router,

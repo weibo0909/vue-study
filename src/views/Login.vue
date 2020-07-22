@@ -1,6 +1,6 @@
 <template>
     <div class="login-page">
-        <h1>登陆组件</h1>
+        <h1>用户登陆</h1>
         <div class="login-content">
             <account-login :rule-form="ruleForm"
                            :rules="rules"
@@ -9,27 +9,36 @@
             ></account-login>
         </div>
 
-        <h1>短信登陆组件</h1>
-        <div class="login-content">
-            <phone-login :rule-form="phoneForm"
-                         :rules="rules"
-                         :count-down="30"
-                         @submit="submit"
-                         @send="send"
-                         @errorhandle="errorhandle"
-            ></phone-login>
-        </div>
+        <!--        <h1>短信登陆组件</h1>-->
+        <!--        <div class="login-content">-->
+        <!--            <phone-login :rule-form="phoneForm"-->
+        <!--                         :rules="rules"-->
+        <!--                         :count-down="30"-->
+        <!--                         @submit="submit"-->
+        <!--                         @send="send"-->
+        <!--                         @errorhandle="errorhandle"-->
+        <!--            ></phone-login>-->
+        <!--        </div>-->
 
     </div>
 </template>
 
 <script>
+    import store from '../store';
+
     export default {
         name: 'Login',
         props: {},
         methods: {
             submit() {
                 this.$message.success('提交成功');
+                setTimeout(() => {
+                    store.commit('login', {
+                        account: this.ruleForm.userName,
+                        password: this.ruleForm.password
+                    });
+                    this.$router.push('/');
+                }, 500);
             },
             errorhandle() {
                 this.$message.error('表单填写有误，请检查！');
