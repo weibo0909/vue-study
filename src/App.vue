@@ -4,9 +4,6 @@
     </div>
 </template>
 
-<style>
-    body{
-        margin: 0;
-        padding: 0;
-    }
+<style lang="scss">
+    @import "./assets/App.scss";
 </style>

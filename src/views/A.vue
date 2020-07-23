@@ -61,30 +61,6 @@
     };
 </script>
 
-<style scoped>
-    .page-a {
-        text-align: left;
-        padding: 24px;
-    }
-
-    .collapse {
-        display: inline-block;
-        width: 800px;
-        padding: 8px;
-        border: 1px solid #dcdfe6;
-        border-radius: 4px;
-        background: #fff;
-    }
-
-    .el-collapse-item {
-        text-align: left;
-    }
-
-    .margin-bottom {
-        margin-bottom: 10px;
-    }
-
-    .el-input {
-        width: 500px;
-    }
+<style scoped lang="scss">
+    @import '../assets/views/A.scss';
 </style>

@@ -84,13 +84,6 @@
     };
 </script>
 
-<style scoped>
-    .login-page {
-        text-align: center;
-    }
-
-    .login-content {
-        width: 500px;
-        display: inline-block;
-    }
+<style scoped lang="scss">
+    @import "../assets/views/Login.scss";
 </style>
