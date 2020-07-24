@@ -1,0 +1,34 @@
+.root {
+    .el-header {
+        background-color: #0080ff;
+        color: #fff;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    .el-aside {
+        background-color: #0f52ba;
+        color: #333;
+        text-align: center;
+        line-height: 260px;
+        height: 100vh;
+    }
+
+    .logo {
+        height: 60px;
+        width: 200px;
+        background-image: url("../assets/logo.png");
+        background-position: center;
+        background-size: 60px 40px;
+        background-repeat: no-repeat;
+    }
+
+    .el-main {
+        background-color: #fafafa;
+        color: #333;
+        text-align: center;
+        line-height: 160px;
+        height: calc(100vh - 60px);
+        position: relative;
+    }
+}
