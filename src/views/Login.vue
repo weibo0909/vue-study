@@ -31,7 +31,7 @@
         props: {},
         methods: {
             submit() {
-                this.$message.success('提交成功');
+                // this.$message.success('提交成功');
                 setTimeout(() => {
                     store.commit('login', {
                         account: this.ruleForm.userName,

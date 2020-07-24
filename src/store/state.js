@@ -1,3 +1,5 @@
 export default {
-    userInfo: null
+    token:'',
+    userInfo: null,
+    tableData:[]
 };

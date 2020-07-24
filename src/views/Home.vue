@@ -22,7 +22,6 @@
 
 <script>
     // @ is an alias to /src
-    import axios from 'axios';
 
     export default {
         name: 'Home',
@@ -32,9 +31,8 @@
             };
         },
         created() {
-            axios.get('/data.json').then(res => {
-                console.log(res.data);
-                this.tableData = res.data;
+            this.$api.home.getData().then(res => {
+                this.tableData = res.data.data;
             });
         },
         methods: {}
