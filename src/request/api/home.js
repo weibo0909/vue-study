@@ -9,7 +9,7 @@ import qs from 'qs'; // 根据需求是否导入qs模块
 const home = {
     // 新闻列表
     getData () {
-        return axios.get(`${base.sq}/req/mock/2exzcts`);
+        return axios.get(`${base.sq}/api/req/mock/2klh3ac`);
     }
 };
 

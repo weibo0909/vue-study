@@ -6,6 +6,7 @@ module.exports = {
             '/api': {
                 target: 'https://api.uukit.com',
                 secure:false,
+                changeOrigin: true,
                 pathRewrite: {'^/api': ''}
             }
         }
