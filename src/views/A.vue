@@ -8,16 +8,16 @@
                     <div class="margin-bottom" v-html="content"></div>
                     <div class="margin-bottom" @click="addHandle">点击累加::{{count}}</div>
                 </div>
-               <div v-else-if="item.name == 2">
-                   <div class="margin-bottom" :title="title">{{text}}</div>
-                   <el-input v-model="value" class="el-input"></el-input>
-                   <div class="margin-bottom">input的值:: {{value}}</div>
-               </div>
-              <div v-else="item.name == 3">
-                  <el-input v-model="value" class="el-input"></el-input>
-                  <div class="margin-bottom" :title="title">{{fulltext}}</div>
-                  <div class="margin-bottom">你一共输入了{{valueCount}}个字</div>
-              </div>
+                <div v-else-if="item.name == 2">
+                    <div class="margin-bottom" :title="title">{{text}}</div>
+                    <el-input v-model="value" class="el-input"></el-input>
+                    <div class="margin-bottom">input的值:: {{value}}</div>
+                </div>
+                <div v-else="item.name == 3">
+                    <el-input v-model="value" class="el-input"></el-input>
+                    <div class="margin-bottom" :title="title">{{fulltext}}</div>
+                    <div class="margin-bottom">你一共输入了{{valueCount}}个字</div>
+                </div>
             </el-collapse-item>
         </el-collapse>
     </div>

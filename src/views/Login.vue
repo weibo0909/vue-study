@@ -24,21 +24,19 @@
 </template>
 
 <script>
-    import store from '../store';
+    import {mapActions} from 'vuex';
 
     export default {
         name: 'Login',
         props: {},
         methods: {
+            ...mapActions(['login']),
             submit() {
                 // this.$message.success('提交成功');
-                setTimeout(() => {
-                    store.commit('login', {
-                        account: this.ruleForm.userName,
-                        password: this.ruleForm.password
-                    });
-                    this.$router.push('/home');
-                }, 500);
+                this.login({
+                    account: this.ruleForm.userName,
+                    password: this.ruleForm.password
+                });
             },
             errorhandle() {
                 this.$message.error('表单填写有误，请检查！');

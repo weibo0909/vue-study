@@ -21,21 +21,26 @@
 </template>
 
 <script>
-    // @ is an alias to /src
+
+    import {mapActions, mapState} from 'vuex';
 
     export default {
         name: 'Home',
         data() {
-            return {
-                tableData: []
-            };
+            return {};
+        },
+        mounted() {
+            // console.log(this.tableData);
+        },
+        computed: {
+            ...mapState(['tableData'])
         },
         created() {
-            this.$api.home.getData().then(res => {
-                this.tableData = res.data.data;
-            });
+            this.getData();
         },
-        methods: {}
+        methods: {
+            ...mapActions(['getData'])
+        }
     };
 </script>
 
